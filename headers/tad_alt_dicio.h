@@ -5,7 +5,7 @@
 
 // Declarando um tipo para a lista de palavras
 typedef struct {
-    char** vetor_palavras;
+    char **vetor_palavras;
 } tipo_vetor_palavras;
 
 // Declarando um tipo para o dicionário

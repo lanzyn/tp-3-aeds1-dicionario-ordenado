@@ -38,7 +38,7 @@ int main() {
         printf("5. Verificar o número de palavras do texto\n"); // Exibe o número de palavras únicas do texto de cada letra e total
         printf("6. Verificar se determinada palavra está na lista de palavras do texto\n"); // Verifica se determinada palavra está nas listas
         printf("7. Remover determinada palavra de uma lista de palavras\n"); // Remove um determina palavra de uma determina lista
-        printf("8. Ordenação\n"); // Ordenção do dicionário através de diferente métodos de ordenação
+        printf("8. Ordenação\n"); // Ordenção do dicionário através de diferentes métodos de ordenação
         printf("9. Instruções para usar o programa\n"); // Breve explicação de como usar o programa
         printf("10. Sair do programa\n"); // Encerra o programa
         printf("------------------------------------------------------------\n");
@@ -169,15 +169,14 @@ int main() {
                             printf("\n");
                             printf("Método desejado: ");
                             scanf("%d", &sorting);
-                            printf("\n");
-
-                            printf("\n-----------------------------------------------------------------\n");
-                            printf("UNSORTED:\n\n");
-                            imprime_new_dicionario_letra(&new_dicionario, &dicionario, letra_desejada);
-                            printf("-----------------------------------------------------------------\n");
+                            system("cls || clear");
 
                             switch (sorting) {
                                 case 1 :
+                                    printf("\n-----------------------------------------------------------------\n");
+                                    printf("UNSORTED:\n\n");
+                                    imprime_new_dicionario_letra(&new_dicionario, &dicionario, letra_desejada);
+                                    printf("-----------------------------------------------------------------\n");
                                     printf("\nOrdenação com Bubble Sort!\n");
                                     bubble_sort(&new_dicionario, length_sort, num_letra);
                                     printf("\n-----------------------------------------------------------------\n");
@@ -186,35 +185,60 @@ int main() {
                                     printf("-----------------------------------------------------------------\n");
                                     break;
                                 case 2 :
+                                    printf("\n-----------------------------------------------------------------\n");
+                                    printf("UNSORTED:\n\n");
+                                    imprime_new_dicionario_letra(&new_dicionario, &dicionario, letra_desejada);
+                                    printf("-----------------------------------------------------------------\n");
                                     printf("\nOrdenação com Selection Sort!\n");
+                                    selection_sort(&new_dicionario, length_sort, num_letra);
                                     printf("\n-----------------------------------------------------------------\n");
                                     printf("SORTED:\n\n");
                                     imprime_new_dicionario_letra(&new_dicionario, &dicionario, letra_desejada);
                                     printf("-----------------------------------------------------------------\n");
                                     break;
                                 case 3 :
+                                    printf("\n-----------------------------------------------------------------\n");
+                                    printf("UNSORTED:\n\n");
+                                    imprime_new_dicionario_letra(&new_dicionario, &dicionario, letra_desejada);
+                                    printf("-----------------------------------------------------------------\n");
                                     printf("\nOrdenação com Insertion Sort!\n");
+                                    insertion_sort(&new_dicionario, length_sort, num_letra);
                                     printf("\n-----------------------------------------------------------------\n");
                                     printf("SORTED:\n\n");
                                     imprime_new_dicionario_letra(&new_dicionario, &dicionario, letra_desejada);
                                     printf("-----------------------------------------------------------------\n");
                                     break;
                                 case 4 :
+                                    printf("\n-----------------------------------------------------------------\n");
+                                    printf("UNSORTED:\n\n");
+                                    imprime_new_dicionario_letra(&new_dicionario, &dicionario, letra_desejada);
+                                    printf("-----------------------------------------------------------------\n");
                                     printf("\nOrdenação com Shell Sort!\n");
+                                    shell_sort(&new_dicionario, length_sort, num_letra);
                                     printf("\n-----------------------------------------------------------------\n");
                                     printf("SORTED:\n\n");
                                     imprime_new_dicionario_letra(&new_dicionario, &dicionario, letra_desejada);
                                     printf("-----------------------------------------------------------------\n");
                                     break;
                                 case 5 :
+                                    printf("\n-----------------------------------------------------------------\n");
+                                    printf("UNSORTED:\n\n");
+                                    imprime_new_dicionario_letra(&new_dicionario, &dicionario, letra_desejada);
+                                    printf("-----------------------------------------------------------------\n");
                                     printf("\nOrdenação com Quick Sort!\n");
+                                    quick_sort(&new_dicionario, length_sort, num_letra);
                                     printf("\n-----------------------------------------------------------------\n");
                                     printf("SORTED:\n\n");
                                     imprime_new_dicionario_letra(&new_dicionario, &dicionario, letra_desejada);
                                     printf("-----------------------------------------------------------------\n");
                                     break;
                                 case 6 :
+                                    printf("\n-----------------------------------------------------------------\n");
+                                    printf("UNSORTED:\n\n");
+                                    imprime_new_dicionario_letra(&new_dicionario, &dicionario, letra_desejada);
+                                    printf("-----------------------------------------------------------------\n");
                                     printf("\nOrdenação com Heap Sort!\n");
+                                    Heapsort(&new_dicionario, length_sort, num_letra);
                                     printf("\n-----------------------------------------------------------------\n");
                                     printf("SORTED:\n\n");
                                     imprime_new_dicionario_letra(&new_dicionario, &dicionario, letra_desejada);
@@ -236,15 +260,14 @@ int main() {
                             printf("\n");
                             printf("Método desejado: ");
                             scanf("%d", &sorting);
-                            printf("\n");
-
-                            printf("\n-----------------------------------------------------------------\n");
-                            printf("UNSORTED:\n\n");
-                            imprime_new_dicionario_completo(&new_dicionario, &dicionario);
-                            printf("-----------------------------------------------------------------\n");
+                            system("cls || clear");
 
                             switch (sorting) {
                                 case 1 :
+                                    printf("\n-----------------------------------------------------------------\n");
+                                    printf("UNSORTED:\n\n");
+                                    imprime_new_dicionario_completo(&new_dicionario, &dicionario);
+                                    printf("-----------------------------------------------------------------\n");
                                     printf("\nOrdenação com Bubble Sort!\n");
                                     printf("\n-----------------------------------------------------------------\n");
                                     printf("SORTED:\n\n");
@@ -252,6 +275,10 @@ int main() {
                                     printf("-----------------------------------------------------------------\n");
                                     break;
                                 case 2 :
+                                    printf("\n-----------------------------------------------------------------\n");
+                                    printf("UNSORTED:\n\n");
+                                    imprime_new_dicionario_completo(&new_dicionario, &dicionario);
+                                    printf("-----------------------------------------------------------------\n");
                                     printf("\nOrdenação com Selection Sort!\n");
                                     printf("\n-----------------------------------------------------------------\n");
                                     printf("SORTED:\n\n");
@@ -259,6 +286,10 @@ int main() {
                                     printf("-----------------------------------------------------------------\n");
                                     break;
                                 case 3 :
+                                    printf("\n-----------------------------------------------------------------\n");
+                                    printf("UNSORTED:\n\n");
+                                    imprime_new_dicionario_completo(&new_dicionario, &dicionario);
+                                    printf("-----------------------------------------------------------------\n");
                                     printf("\nOrdenação com Insertion Sort!\n");
                                     printf("\n-----------------------------------------------------------------\n");
                                     printf("SORTED:\n\n");
@@ -266,6 +297,10 @@ int main() {
                                     printf("-----------------------------------------------------------------\n");
                                     break;
                                 case 4 :
+                                    printf("\n-----------------------------------------------------------------\n");
+                                    printf("UNSORTED:\n\n");
+                                    imprime_new_dicionario_completo(&new_dicionario, &dicionario);
+                                    printf("-----------------------------------------------------------------\n");
                                     printf("\nOrdenação com Shell Sort!\n");
                                     printf("\n-----------------------------------------------------------------\n");
                                     printf("SORTED:\n\n");
@@ -273,6 +308,10 @@ int main() {
                                     printf("-----------------------------------------------------------------\n");
                                     break;
                                 case 5 :
+                                    printf("\n-----------------------------------------------------------------\n");
+                                    printf("UNSORTED:\n\n");
+                                    imprime_new_dicionario_completo(&new_dicionario, &dicionario);
+                                    printf("-----------------------------------------------------------------\n");
                                     printf("\nOrdenação com Quick Sort!\n");
                                     printf("\n-----------------------------------------------------------------\n");
                                     printf("SORTED:\n\n");
@@ -280,6 +319,10 @@ int main() {
                                     printf("-----------------------------------------------------------------\n");
                                     break;
                                 case 6 :
+                                    printf("\n-----------------------------------------------------------------\n");
+                                    printf("UNSORTED:\n\n");
+                                    imprime_new_dicionario_completo(&new_dicionario, &dicionario);
+                                    printf("-----------------------------------------------------------------\n");
                                     printf("\nOrdenação com Heap Sort!\n");
                                     printf("\n-----------------------------------------------------------------\n");
                                     printf("SORTED:\n\n");
@@ -292,14 +335,14 @@ int main() {
                             break;
                         case 4 :
                             printf("Instruções:\n");
-                            printf("Passo 1 - Construit o dicionário com suas listas de palavras, só que desta vez com vetores (1)");
-                            printf("Passo 2 - Utilizar as demais funções de ordenação conforme sua vontade");
+                            printf("Passo 1 - Construir o dicionário com suas listas de palavras, só que desta vez com vetores (1)\n");
+                            printf("Passo 2 - Utilizar as demais funções de ordenação conforme sua vontade\n");
                             break;
                         case 5 :
                             loop_sort = 0;
                             break;
                         default :
-                            break;
+                            printf("Opção inválida! Tente novamente.\n");
                     }
                 }
                 break;

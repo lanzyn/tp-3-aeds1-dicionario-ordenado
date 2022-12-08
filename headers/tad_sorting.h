@@ -15,7 +15,18 @@ void selection_sort(new_dicionario *new_dicionario, int length, int num_letra);
 void insertion_sort(new_dicionario *new_dicionario, int length, int num_letra);
 
 // Função de ordenação por Shell Sort
-void shell_sort(new_dicionario *new_dicionario, int length, int num_letra);
+void shell_sort(new_dicionario *new_dicioionar, int length, int num_letra);
+
+// // Função de ordenação por Quick Sort
+void sort(int left, int right, new_dicionario *new_dicionario, int num_letra);
+void partition(int left, int right, int *i, int *j, new_dicionario *new_dicionario, int num_letra);
+void quick_sort(new_dicionario *new_dicionario, int lenght, int num_letra);
+
+
+
+void Heapsort(new_dicionario *new_dicionar, int length, int num_letra);
+void refaz(int Esq, int Dir, new_dicionario *new_dicionario, int num_letra);
+void constroi(new_dicionario *new_dicioionar, int length, int num_letra);
 
 // // Função de ordenação por Quick Sort
 // void sort(int left, int right, new_dicionario *new_dicionario);
@@ -25,4 +36,3 @@ void shell_sort(new_dicionario *new_dicionario, int length, int num_letra);
 // // Função de ordenação por Heap Sort
 // void make(new_dicionario *new_dicionario, int length);
 // void remake(int left, int right, new_dicionario *new_dicionario);
-// void heap_sort(new_dicionario *new_dicionario, int length);
