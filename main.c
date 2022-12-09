@@ -131,7 +131,7 @@ int main() {
                     printf("1. Construir o dicionário do texto\n"); // Constrói o dicionário do texto, desta vez implementado com vetores
                     printf("2. Ordenar e exibir a lista de palavras de determinada letra\n"); // Ordena e exibe a lista de palavras de uma determinada letra
                     printf("3. Ordenar e exibir toda a lista de palavras do texto\n"); // Ordena e exibe toda a lista de palavras do texto
-                    printf("4. Instruções para realizar a ordenação\n"); // Breve explicação de como usar o programa
+                    printf("4. Instruções e observações para realizar a ordenação\n"); // Breve explicação de como usar o programa
                     printf("5. Sair da ordenação e voltar ao menu inicial\n"); // Encerra a ordenação e retorna ao menu inicial
                     printf("\n-----------------------------------------------------------------\n");
                     printf("Opção desejada: ");
@@ -336,7 +336,10 @@ int main() {
                         case 4 :
                             printf("Instruções:\n");
                             printf("Passo 1 - Construir o dicionário com suas listas de palavras, só que desta vez com vetores (1)\n");
-                            printf("Passo 2 - Utilizar as demais funções de ordenação conforme sua vontade\n");
+                            printf("Passo 2 - Utilizar as demais funções de ordenação conforme sua vontade\n\n");
+                            printf("Observações:\n");
+                            printf("- As informações de ordenação exibidas são para aquela lista de palavras e método em específico\n");
+                            printf("- Para obter outras informações de outras lista e métodos limpe as informações primeiro (7)\n");
                             break;
                         case 5 :
                             loop_sort = 0;

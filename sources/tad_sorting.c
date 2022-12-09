@@ -180,7 +180,7 @@ void shell_sort(new_dicionario *new_dicionario, int length, int num_letra) {
 void sort(int left, int right, new_dicionario *new_dicionario, int num_letra) {
    int i, j;
    partition(left, right, &i, &j, new_dicionario, num_letra);
-   if (left < i) {
+   if (left < j) {
     sort(left, j, new_dicionario, num_letra);
    }
    if (i < right) {
@@ -199,10 +199,10 @@ void partition(int left, int right, int *i, int *j, new_dicionario *new_dicionar
 
     do
     {
-        while (strcmp(pivot, new_dicionario -> alfabeto[num_letra].lista_palavras_vetor.vetor_palavras[(*i + *j)/2]) > 0) {
+        while (strcmp(pivot, new_dicionario -> alfabeto[num_letra].lista_palavras_vetor.vetor_palavras[*i]) > 0) {
             (*i)++;
         }
-        while (strcmp(pivot, new_dicionario -> alfabeto[num_letra].lista_palavras_vetor.vetor_palavras[(*i + *j)/2]) < 0)
+        while (strcmp(pivot, new_dicionario -> alfabeto[num_letra].lista_palavras_vetor.vetor_palavras[*j]) < 0)
         {
             (*j)--;
         }
