@@ -7,7 +7,7 @@
 #define LOWER_Z 122
 
 void incializa_vetor_palavras(tipo_vetor_palavras *vetor, int tamanho) {
-    vetor -> vetor_palavras = (char**) malloc(tamanho * sizeof(char*));
+    vetor -> vetor_palavras = (tipo_new_palavra*) malloc(tamanho * sizeof(tipo_new_palavra));
 }
 
 void inicializa_new_dicionario(new_dicionario *new_dicionario, tipo_dicionario *dicionario) {
@@ -25,7 +25,7 @@ void copia_lista_palavras(tipo_vetor_palavras *vetor, tipo_lista_palavras *lista
     int i; i = 0;
     apontador_lista_palavras aux_palavra; aux_palavra = lista_palavras -> primeiro_lista -> p_prox_lista;
     while (aux_palavra != NULL) {
-        vetor -> vetor_palavras[i] = strdup(aux_palavra -> item_palavra.cadeia_caracteres);
+        vetor -> vetor_palavras[i].caracteres = strdup(aux_palavra -> item_palavra.cadeia_caracteres);
         i++;
         aux_palavra = aux_palavra -> p_prox_lista;
     }
@@ -44,13 +44,13 @@ void imprime_new_dicionario_completo(new_dicionario *new_dicionario, tipo_dicion
     int num_palavras;
     for (i = 0; i < 26; i++) {
         num_palavras = retorna_numero_palavras(&dicionario -> alfabeto[i].lista_palavras);
-        printf("\n------------------------------------------------------------\n");
+        printf("\n-----------------------------------------------------------------\n");
         printf("Letra |%c| :\n", dicionario -> alfabeto[i].identificador_upper);
         printf("\n");
         for (j = 0; j < num_palavras; j++) {
-            printf("[%s]\n\n", new_dicionario -> alfabeto[i].lista_palavras_vetor.vetor_palavras[j]);
+            printf("[%s]\n\n", new_dicionario -> alfabeto[i].lista_palavras_vetor.vetor_palavras[j].caracteres);
         }
-        printf("------------------------------------------------------------\n");
+        printf("-----------------------------------------------------------------\n");
         printf("\n\n");
     }
 }
@@ -72,7 +72,7 @@ void imprime_new_dicionario_letra(new_dicionario *new_dicionario, tipo_dicionari
         printf("\n");
         if (retorna_numero_palavras(&dicionario -> alfabeto[aux].lista_palavras) > 0) {
             for (i = 0; i < retorna_numero_palavras(&dicionario -> alfabeto[aux].lista_palavras); i++) {
-                printf("[%s]\n\n", new_dicionario -> alfabeto[aux].lista_palavras_vetor.vetor_palavras[i]);
+                printf("[%s]\n\n", new_dicionario -> alfabeto[aux].lista_palavras_vetor.vetor_palavras[i].caracteres);
             }
         }
         else {

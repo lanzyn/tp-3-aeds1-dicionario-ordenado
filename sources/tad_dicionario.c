@@ -103,11 +103,11 @@ void imprime_dicionario_letra(tipo_dicionario *dicionario, char letra_alfabeto) 
 void imprime_dicionario_completo(tipo_dicionario *dicionario) {
     int i;
     for (i = 0; i < 26; i++) {
-        printf("\n------------------------------------------------------------\n");
+        printf("\n----------------------------------------------------------------\n");
         printf("Letra |%c| :\n", dicionario -> alfabeto[i].identificador_upper);
         printf("\n");
         imprime_lista_palavras(&dicionario -> alfabeto[i].lista_palavras);
-        printf("------------------------------------------------------------\n");
+        printf("----------------------------------------------------------------\n");
         printf("\n\n");
     }
 }
